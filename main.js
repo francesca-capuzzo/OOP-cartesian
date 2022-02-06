@@ -42,3 +42,21 @@ console.log(medianFromB);
 
 const nearestToA = pointA.nearestPoint(pointB, pointC, pointD, pointE);
 console.log(nearestToA);
+
+
+//CALCOLO TRIANGOLO:
+
+const perimeter = Triangle.calculatePerimeter(pointA, pointB, pointE);
+console.log("Il perimetro del triangolo è: " + perimeter.toFixed(2));
+
+const area = Triangle.calculateArea(pointA, pointB, pointE);
+console.log(area);
+
+
+//CALCOLO SEGMENTO:
+
+const lenght = Segment.calculateLenght(pointA, pointB);
+console.log("La lunghezza del segmento è: " + lenght);
+
+const median = Segment.calculateMedianPoint(pointA, pointB);
+console.log(median);

@@ -36,6 +36,7 @@ class MathC{
         return this.calculateDistance(origin, P);
     }
 
+    
     static nearestPoint(startingPoint, ...points){
 
         let nearestPoint = points[0];
