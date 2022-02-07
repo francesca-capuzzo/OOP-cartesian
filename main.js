@@ -60,3 +60,10 @@ console.log("La lunghezza del segmento è: " + lenght);
 
 const median = Segment.calculateMedianPoint(pointA, pointB);
 console.log(median);
+
+
+//CALCOLO RETTANGOLO:
+
+const rectangle = new Rectangle(pointA, pointB, pointC, pointD);
+
+console.log(rectangle.perimeter);
