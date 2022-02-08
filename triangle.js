@@ -41,3 +41,17 @@ class Triangle {
 }
 
 
+class RightTriangle extends Triangle{
+
+    constructor(p1, p2, p3){
+        super(p1, p2, p3);
+    }
+
+    calculateHypotenuse(){
+        const cat1 = this.p1.distanceFrom(this.p2);
+        const cat2 = this.p2.distanceFrom(this.p3);
+        const hypotenuse = Math.sqrt(Math.pow(cat1, 2)+ Math.pow(cat2, 2));
+        return hypotenuse;
+    }
+}
+

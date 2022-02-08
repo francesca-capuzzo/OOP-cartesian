@@ -83,11 +83,44 @@ const topRight = new Point(8, 6);
 const bottomRight = new Point(8, 1);
 const bottomLeft = new Point(1, 1);
 
-const rect1 = new Rectangle(topLeft, topRight, bottomRight, bottomLeft);
+const rect = new Rectangle(topLeft, topRight, bottomRight, bottomLeft);
 
-console.log(rect1.perimeter);
+console.log(rect.perimeter);
 
-console.log(rect1.area);
+console.log(rect.area);
+
+
+
+const startingPoint= new Point(6,6);
+
+const rect1 = new Rectangle1(startingPoint, 4, 3);
+
+console.log(rect1);
+
+const tl= new Point(6 ,6);
+
+const br= new Point(1 ,2);
+
+
+const rect2 = new Rectangle2(tl, br);
+
+
+console.log(rect2.calculatePerimeter())
+
+
+const rect3 = new Rect(tl, br);
+
+
+const quad1 = new Square(tl, 6);
+
+const quad2 = new Squa(tl, 6);
+
+
+console.log("con classe", quad1)
+console.log("con prototipo", quad2);
+
+
+console.log(quad2.perimeter());
 
 
 
@@ -112,3 +145,34 @@ mappa.set(2, "pippo");
 console.log(mappa);
 
 //inoltre sembra un oggetto ma usa una freccia tra i key:value pairs e li scrive come key -> value
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//CICLARE OGGETTI:
+
+// for (let i = 0; i < 100; i++) {
+//     console.log(i);                            //---> POSSO CICLARE NUMERI , ARRAY E OGNI OGGETTO CICLABILE
+// }
+
+
+// for (const element of quad2) {             //---> NON POSSO CICLARE QUESTO OGGETTO così com'è
+//     console.log(element);
+// }
+
+
+// quad2.map(p => console.log(p));             //---> NON POSSO CICLARE QUESTO OGGETTO così com'è 
+
+
+//POSSO PERò GENERARE OGGETTI CICLABILI TRAMITE UNA CLASSE CHE CHIAMERò RANGE{}: 
+
+const range = new Range(0, 20, 2);
+
+for (const number of range) {
+    console.log("Range num: ", number);
+}
+
+//NB: QUESTO NON GENERA UN ARRAY MA CREA TUTTI I VALORI A RUN TIME (li calcola al momento!!!) ---> non occupa lo spazio in memoria che occuperebbe un array e quindi posso anche generare numeri da 0 a +Infinity;
